@@ -52,7 +52,8 @@ function M.copy_cheat_value(prompt_bufnr)
     t_actions.close(prompt_bufnr)
     local selection = t_actions_state.get_selected_entry()
     local cheatcode = selection.value.cheatcode
-    vim.fn.setreg("0", cheatcode)
+    local register = require('cheatsheet.config').options.register
+    vim.fn.setreg(register, cheatcode)
     vim.api.nvim_echo(
         { { "Yanked ", "" }, { cheatcode, "cheatCode" } },
             false, {}

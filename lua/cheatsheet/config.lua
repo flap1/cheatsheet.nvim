@@ -21,6 +21,7 @@ local defaults = {
     -- don't have the plugin installed (searches runtimepath for
     -- same directory name)
     include_only_installed_plugins = true,
+    register = "0",
     -- Key mappings bound inside the telescope window
     telescope_mappings = {
         ['<CR>'] = require('cheatsheet.telescope.actions').select_or_fill_commandline,
